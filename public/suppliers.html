@@ -1,0 +1,75 @@
+<!DOCTYPE html><html lang='en-GB'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Suppliers — EventFlow</title><link rel='stylesheet' href='/assets/css/styles.css'></head><body>
+<header class="header" role="banner">
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label="EventFlow home">
+      <span class="logo" aria-hidden="true"></span><span>EventFlow</span>
+    </a>
+    <button id="burger" class="cta secondary" style="display:none">Menu</button>
+    <nav class="nav" aria-label="Primary">
+      <a href="/start.html">Plan an Event</a>
+      <a href="/suppliers.html" aria-current="page">Suppliers</a>
+      <a href="/plan.html">My Plan</a>
+      <a href="/for-suppliers.html">For Suppliers</a>
+      <a href="/faq.html">FAQ</a>
+      <a href="/auth.html" id="nav-auth">Sign in</a>
+      <a href="#" id="nav-dashboard" style="display:none">Dashboard</a>
+      <a href="#" id="nav-signout" style="display:none">Sign out</a>
+    </nav>
+  </div>
+</header>
+<script src="/assets/js/auth-nav.js" defer></script>
+<main class='section'>
+  <section class="section section--muted">
+    <div class="container">
+      <div class="card">
+        <div class="small" style="text-transform:uppercase;letter-spacing:.18em;color:#64748B">Experimental</div>
+        <h1 style="margin-top:.4rem;">Find wedding venues near you</h1>
+        <p class="small">
+          This experimental map uses your browser and Google Maps to search for wedding venues near your location.
+          You can share your location or type a UK postcode. Results load directly in the map below.
+        </p>
+        <div class="map-controls">
+          <div class="form-row">
+            <button class="cta secondary" type="button" id="map-use-location">Use my location</button>
+          </div>
+          <form class="form-row" id="map-postcode-form">
+            <label for="map-postcode">Or enter a postcode</label>
+            <input id="map-postcode" type="text" placeholder="e.g. SW1A 1AA">
+          </form>
+        </div>
+        <div id="map-status" class="small"></div>
+        <div class="map-shell" style="margin-top:1rem;">
+          <iframe
+            id="venue-map"
+            title="Wedding venues near you"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=wedding%20venues%20in%20the%20UK&output=embed">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+<div class='container'>
+<h1>Suppliers for your event</h1>
+<p class="small">Use the filters to narrow down your search.</p>
+<div class="card">
+  <div class="form-row" style="grid-template-columns:repeat(auto-fit,minmax(160px,1fr))">
+    <div><label>Category</label><select id="filterCategory"><option value="">All</option><option>Venues</option><option>Catering</option><option>Photography</option><option>Entertainment</option><option>Flowers & décor</option><option>Transport</option><option>Extras & add-ons</option></select></div>
+    <div><label>Price range</label><select id="filterPrice"><option value="">Any</option><option>£</option><option>££</option><option>£££</option></select></div>
+    <div><label>Search</label><input id="filterQuery" placeholder="Search by name or description"></div>
+  </div>
+</div>
+<div id="resultCount" class="small" style="margin:10px 2px 0"></div>
+<div id="results" class="section"><div class="card"><p>Loading suppliers…</p></div></div>
+<script src="/assets/js/app.js"></script>
+<script>window.__EF_PAGE__='results'</script>
+</div></main>
+<footer class="footer" role="contentinfo">
+  <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap">
+    <div><strong>EventFlow</strong><br><span class="small">Event planning made simple.</span></div>
+    <div class="version">Version: v3.9.0</div>
+    <div class="small"><a href="/credits.html">Credits</a> · <a href="/contact.html">Contact</a> · <a href="/terms.html">Terms</a> · <a href="/privacy.html">Privacy</a></div>
+  </div>
+</footer>
+</body></html>

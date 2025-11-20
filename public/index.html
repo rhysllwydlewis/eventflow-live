@@ -1,0 +1,149 @@
+<!DOCTYPE html><html lang="en-GB"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EventFlow — Plan your event the simple way.</title>
+<link rel="stylesheet" href="/assets/css/styles.css">
+<meta name="description" content="Find suppliers, build your plan and keep everything in one place — beautifully simple on mobile and desktop.">
+<link rel="icon" href="/favicon.svg">
+</head><body>
+<div id="ef-loader" class="loader-overlay" aria-hidden="true">
+  <div class="loader-inner">
+    <div class="loader-spinner"></div>
+    <div class="loader-logo">EventFlow</div>
+    <p class="small muted">Setting up your planning space…</p>
+  </div>
+</div>
+
+
+<header class="header" role="banner">
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label="EventFlow home">
+      <span class="logo" aria-hidden="true"></span><span>EventFlow</span>
+    </a>
+    <button id="burger" class="cta secondary" style="display:none">Menu</button>
+    <nav class="nav" aria-label="Primary">
+      <a href="/start.html">Plan an Event</a>
+      <a href="/suppliers.html">Suppliers</a>
+      <a href="/plan.html">My Plan</a>
+      <a href="/for-suppliers.html">For Suppliers</a>
+      <a href="/faq.html">FAQ</a>
+      <a href="/auth.html" id="nav-auth">Sign in</a>
+      <a href="#" id="nav-dashboard" style="display:none">Dashboard</a>
+      <a href="#" id="nav-signout" style="display:none">Sign out</a>
+    </nav>
+  </div>
+</header>
+<script src="/assets/js/auth-nav.js" defer></script>
+
+<main>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="small">Plan in minutes</div>
+        <h1>Everything you need to organise an event — in one clear place.</h1>
+        <p class="lead">Find venues, catering, entertainment and more. Add to your plan with a click, start conversations when you’re ready, and keep everything together.</p>
+        <div class="hero-cta">
+          <button class="cta" onclick="location.href='/start.html'">Start planning</button>
+          <a class="cta secondary" href="/auth.html">Sign in / Create account</a>
+        </div>
+      </div>
+      <div>
+        <div class="collage" aria-hidden="true">
+          <div class="frame"><span class="tag">Venues</span><img loading="lazy" src="/assets/images/collage-venue.svg" alt=""></div>
+          <div class="frame"><span class="tag">Catering</span><img loading="lazy" src="/assets/images/collage-catering.svg" alt=""></div>
+          <div class="frame"><span class="tag">Entertainment</span><img loading="lazy" src="/assets/images/collage-entertainment.svg" alt=""></div>
+          <div class="frame"><span class="tag">Photography</span><img loading="lazy" src="/assets/images/collage-photography.svg" alt=""></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="small" style="text-transform:uppercase;letter-spacing:.2em;color:#7E8794">Featured packages</div>
+      <div id="featured-packages" class="cards"><div class="card"><p class="small">Loading…</p></div></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="cards">
+        <div class="card"><h3>1 · Tell us about your event</h3><p class="small">Type, location and date help us surface relevant suppliers.</p></div>
+        <div class="card"><h3>2 · Compare suppliers</h3><p class="small">Browse venues, catering, entertainment and more — add to your plan with one click.</p></div>
+        <div class="card"><h3>3 · Save & message</h3><p class="small">Create a free account to save your plan and start conversations with suppliers.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--muted">
+    <div class="container">
+      <div class="cards">
+        <div class="card">
+          <h3>Designed for busy people</h3>
+          <p class="small">
+            EventFlow keeps everything in one place — suppliers, notes, and conversations — so you
+            don&apos;t have to juggle email threads and spreadsheets.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Built around real events</h3>
+          <p class="small">
+            The categories and filters are based on common event types, from small celebrations to
+            large functions, so it scales with whatever you&apos;re planning.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Simple now, room to grow</h3>
+          <p class="small">
+            Today EventFlow helps you discover and shortlist suppliers.
+            Future versions can add budgets, timelines and more without changing how you work.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container">
+      <div class="card reveal">
+        <div class="small" style="text-transform:uppercase;letter-spacing:.18em;color:#64748B">Overview</div>
+        <h2 style="margin-top:.4rem;">A simple timeline for getting started</h2>
+        <p class="small">
+          You don&apos;t have to plan everything at once. EventFlow is designed so you can make progress in small,
+          confident steps — whether you&apos;re organising a wedding, party or work function.
+        </p>
+        <div class="timeline" style="margin-top:1.4rem;">
+          <div class="timeline-step">
+            <h3>1. Set your direction</h3>
+            <p>Decide roughly what you&apos;re planning, when it&apos;ll happen and how many people you&apos;re inviting.</p>
+          </div>
+          <div class="timeline-step">
+            <h3>2. Shortlist venues &amp; key suppliers</h3>
+            <p>Browse suppliers, open a few that feel right and add them to your plan so everything stays together.</p>
+          </div>
+          <div class="timeline-step">
+            <h3>3. Start a few conversations</h3>
+            <p>Message the suppliers that stand out. Ask about availability, pricing and what they recommend.</p>
+          </div>
+          <div class="timeline-step">
+            <h3>4. Lock things in</h3>
+            <p>Once you&apos;re happy, confirm your favourites directly with each supplier and update your plan.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer" role="contentinfo">
+  <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap">
+    <div><strong>EventFlow</strong><br><span class="small">Event planning made simple.</span></div>
+    <div class="version">Version: v3.9.0</div>
+    <div class="small"><a href="/credits.html">Credits</a> · <a href="/contact.html">Contact</a> · <a href="/terms.html">Terms</a> · <a href="/privacy.html">Privacy</a></div>
+  </div>
+</footer>
+
+<script src="/assets/js/app.js"></script>
+<script>window.__EF_PAGE__='home'</script>
+</body></html>

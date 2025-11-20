@@ -1,0 +1,60 @@
+<!DOCTYPE html><html lang='en-GB'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>My Event Plan — EventFlow</title><link rel='stylesheet' href='/assets/css/styles.css'></head><body>
+<header class="header" role="banner">
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label="EventFlow home">
+      <span class="logo" aria-hidden="true"></span><span>EventFlow</span>
+    </a>
+    <button id="burger" class="cta secondary" style="display:none">Menu</button>
+    <nav class="nav" aria-label="Primary">
+      <a href="/start.html">Plan an Event</a>
+      <a href="/suppliers.html">Suppliers</a>
+      <a href="/plan.html" aria-current="page">My Plan</a>
+      <a href="/for-suppliers.html">For Suppliers</a>
+      <a href="/faq.html">FAQ</a>
+      <a href="/auth.html" id="nav-auth">Sign in</a>
+      <a href="#" id="nav-dashboard" style="display:none">Dashboard</a>
+      <a href="#" id="nav-signout" style="display:none">Sign out</a>
+    </nav>
+  </div>
+</header>
+<script src="/assets/js/auth-nav.js" defer></script>
+<main class='section'><div class='container'>
+<h1>My Event Plan</h1>
+<div id="cloud-status" class="small">Sign in as a customer to save your plan.</div>
+<div class="section" id="plan-progress-wrap">
+  <div class="card plan-progress">
+    <div class="plan-progress-visual">
+      <svg viewBox="0 0 120 120" class="plan-ring" aria-hidden="true">
+        <circle class="plan-ring-bg" cx="60" cy="60" r="48"></circle>
+        <circle class="plan-ring-value" cx="60" cy="60" r="48"></circle>
+      </svg>
+      <div class="plan-ring-label">
+        <div class="small">Plan completeness</div>
+        <div id="plan-progress-percent">0%</div>
+      </div>
+    </div>
+    <div class="plan-progress-text">
+      <p class="small">
+        As you add different types of suppliers — venue, catering, photography, entertainment and more —
+        this ring will fill to show how complete your plan is. It&apos;s just for fun and doesn&apos;t affect anything behind the scenes.
+      </p>
+      <div class="small" id="plan-progress-breakdown"></div>
+    </div>
+  </div>
+</div>
+
+<section id="plan-list" class="section"><div class="card"><p>Your plan is currently empty. Add suppliers to build it.</p></div></section>
+<section class="card"><h3>My notes</h3><textarea id="plan-notes" rows="5" placeholder="Your notes…"></textarea><div class="form-actions"><button class="cta" id="save-notes">Save notes</button><span id="notes-status" class="small"></span></div></section>
+<div class="section" style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap"><div class="small">Ready to move forward?</div><div class="form-actions"><button class="cta" id="message-all">Message all</button><button class="cta secondary" id="export-csv">Export CSV</button></div></div>
+<div id="modal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);align-items:center;justify-content:center;padding:16px"><div style="background:#fff;border-radius:12px;max-width:720px;width:100%;padding:16px"><h3>Copy emails & message</h3><div class="card" id="modal-emails" style="font-family:monospace;word-break:break-all">Loading…</div><label>Your message</label><textarea id="modal-message" rows="6" placeholder="Write your message…"></textarea><div class="form-actions" style="margin-top:10px"><button class="cta" id="open-mail">Open mail</button><button class="cta secondary" id="close-modal">Close</button></div></div></div>
+<script src="/assets/js/app.js"></script>
+<script>window.__EF_PAGE__='plan'</script>
+</div></main>
+<footer class="footer" role="contentinfo">
+  <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap">
+    <div><strong>EventFlow</strong><br><span class="small">Event planning made simple.</span></div>
+    <div class="version">Version: v3.9.0</div>
+    <div class="small"><a href="/credits.html">Credits</a> · <a href="/contact.html">Contact</a> · <a href="/terms.html">Terms</a> · <a href="/privacy.html">Privacy</a></div>
+  </div>
+</footer>
+</body></html>

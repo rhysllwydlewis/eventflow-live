@@ -1,0 +1,38 @@
+<!DOCTYPE html><html lang='en-GB'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Admin — EventFlow</title><link rel='stylesheet' href='/assets/css/styles.css'></head><body>
+<header class="header" role="banner">
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label="EventFlow home">
+      <span class="logo" aria-hidden="true"></span><span>EventFlow</span>
+    </a>
+    <button id="burger" class="cta secondary" style="display:none">Menu</button>
+    <nav class="nav" aria-label="Primary">
+      <a href="/start.html">Plan an Event</a>
+      <a href="/suppliers.html">Suppliers</a>
+      <a href="/plan.html">My Plan</a>
+      <a href="/for-suppliers.html">For Suppliers</a>
+      <a href="/faq.html">FAQ</a>
+      <a href="/auth.html" id="nav-auth">Sign in</a>
+      <a href="#" id="nav-dashboard" style="display:none">Dashboard</a>
+      <a href="#" id="nav-signout" style="display:none">Sign out</a>
+    </nav>
+  </div>
+</header>
+<script src="/assets/js/auth-nav.js" defer></script>
+<main class='section'><div class='container'>
+<h1>Admin</h1>
+<div class="cards">
+  <div class="card"><h3>Metrics</h3><p class="small">Totals below reflect live data.</p><div id="metrics" class="small">Loading…</div></div>
+  <div class="card"><h3>Suppliers (approve/hide)</h3><div id="admin-suppliers" class="section"><p class="small">Loading…</p></div></div>
+  <div class="card"><h3>Packages (approve/hide/feature)</h3><div id="admin-packages" class="section"><p class="small">Loading…</p></div></div>
+</div>
+<script src="/assets/js/app.js"></script>
+<script>window.__EF_PAGE__='admin'</script>
+</div></main>
+<footer class="footer" role="contentinfo">
+  <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap">
+    <div><strong>EventFlow</strong><br><span class="small">Event planning made simple.</span></div>
+    <div class="version">Version: v3.9.0</div>
+    <div class="small"><a href="/credits.html">Credits</a> · <a href="/contact.html">Contact</a> · <a href="/terms.html">Terms</a> · <a href="/privacy.html">Privacy</a></div>
+  </div>
+</footer>
+</body></html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html><html lang='en-GB'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Sign in / Create account — EventFlow</title><link rel='stylesheet' href='/assets/css/styles.css'></head><body>
+<header class="header" role="banner">
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label="EventFlow home">
+      <span class="logo" aria-hidden="true"></span><span>EventFlow</span>
+    </a>
+    <button id="burger" class="cta secondary" style="display:none">Menu</button>
+    <nav class="nav" aria-label="Primary">
+      <a href="/start.html">Plan an Event</a>
+      <a href="/suppliers.html">Suppliers</a>
+      <a href="/plan.html">My Plan</a>
+      <a href="/for-suppliers.html">For Suppliers</a>
+      <a href="/faq.html">FAQ</a>
+      <a href="/auth.html" id="nav-auth">Sign in</a>
+      <a href="#" id="nav-dashboard" style="display:none">Dashboard</a>
+      <a href="#" id="nav-signout" style="display:none">Sign out</a>
+    </nav>
+  </div>
+</header>
+<script src="/assets/js/auth-nav.js" defer></script>
+<main class='section'><div class='container'>
+<h1>Account</h1>
+<div style="display:flex;gap:10px;border:1px solid #e3e9ef;border-radius:10px;overflow:hidden;width:max-content">
+  <button id="tab-signin" aria-selected="true" style="padding:10px 14px;border:none;background:#fff;cursor:pointer">Sign in</button>
+  <button id="tab-create" aria-selected="false" style="padding:10px 14px;border:none;background:#f7fafc;cursor:pointer">Create account</button>
+</div>
+<section id="panel-signin" style="margin-top:12px">
+  <form id="login-form" class="card">
+    <div class="form-row"><label>Email</label><input id="login-email" type="email" required placeholder="you@example.com"></div>
+    <div class="form-row"><label>Password</label><input id="login-password" type="password" required placeholder="Your password"></div>
+    <div class="form-actions"><button class="cta" type="submit">Sign in</button><span class="small" id="login-status"></span></div>
+    <p class="small">Demo: admin@eventflow.local / Admin123!, supplier@eventflow.local / Supplier123!, customer@eventflow.local / Customer123!</p>
+  </form>
+</section>
+<section id="panel-create" hidden style="margin-top:12px">
+  <form id="register-form" class="card">
+    <div class="form-row"><label>Name</label><input id="reg-name" required></div>
+    <div class="form-row"><label>Email</label><input id="reg-email" type="email" required></div>
+    <div class="form-row"><label>Password</label><input id="reg-password" type="password" required placeholder="Min 8 chars incl. a letter and a number"></div>
+    <div class="form-row"><label>I am a…</label><div><label><input type="radio" name="role" value="customer" checked> Customer</label> <label style="margin-left:10px"><input type="radio" name="role" value="supplier"> Supplier</label></div></div>
+    <div class="form-actions"><button class="cta" type="submit">Create account</button><span class="small" id="reg-status"></span></div>
+  </form>
+</section>
+<script>
+const tabSign=document.getElementById('tab-signin');const tabCreate=document.getElementById('tab-create');const panelSign=document.getElementById('panel-signin');const panelCreate=document.getElementById('panel-create');
+tabSign.addEventListener('click',()=>{tabSign.setAttribute('aria-selected','true');tabCreate.setAttribute('aria-selected','false');panelSign.hidden=false;panelCreate.hidden=true;});
+tabCreate.addEventListener('click',()=>{tabSign.setAttribute('aria-selected','false');tabCreate.setAttribute('aria-selected','true');panelSign.hidden=true;panelCreate.hidden=false;});
+</script>
+<script src="/assets/js/app.js"></script>
+<script>window.__EF_PAGE__='auth'</script>
+</div></main>
+<footer class="footer" role="contentinfo">
+  <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap">
+    <div><strong>EventFlow</strong><br><span class="small">Event planning made simple.</span></div>
+    <div class="version">Version: v3.9.0</div>
+    <div class="small"><a href="/credits.html">Credits</a> · <a href="/contact.html">Contact</a> · <a href="/terms.html">Terms</a> · <a href="/privacy.html">Privacy</a></div>
+  </div>
+</footer>
+</body></html>

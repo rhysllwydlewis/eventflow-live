@@ -1,0 +1,67 @@
+[
+  {
+    "id": "sup_xmkgxc6kd04f",
+    "ownerUserId": null,
+    "name": "The Willow Barn Venue",
+    "category": "Venues",
+    "location": "Monmouthshire, South Wales",
+    "price_display": "From £1,500",
+    "website": "",
+    "license": "",
+    "amenities": [
+      "Parking",
+      "Garden"
+    ],
+    "maxGuests": 120,
+    "photos": [
+      "https://source.unsplash.com/featured/800x600/?wedding,barn"
+    ],
+    "description_short": "Rustic countryside venue.",
+    "description_long": "Converted barn with indoor/outdoor spaces.",
+    "email": "willowbarn@example.com",
+    "approved": true
+  },
+  {
+    "id": "sup_suj0sb6kd04f",
+    "ownerUserId": null,
+    "name": "Green Oak Catering",
+    "category": "Catering",
+    "location": "Cardiff & South Wales",
+    "price_display": "££",
+    "website": "",
+    "license": "",
+    "amenities": [
+      "Vegan options",
+      "Serving staff"
+    ],
+    "maxGuests": 500,
+    "photos": [
+      "https://source.unsplash.com/featured/800x600/?catering,food"
+    ],
+    "description_short": "Seasonal menus with local produce.",
+    "description_long": "Buffets and formal dining. Vegan options.",
+    "email": "greenoakcatering@example.com",
+    "approved": true
+  },
+  {
+    "id": "sup_5n2run6kd04f",
+    "ownerUserId": null,
+    "name": "Snapshot Photography",
+    "category": "Photography",
+    "location": "Bristol & South West",
+    "price_display": "From £800",
+    "website": "",
+    "license": "",
+    "amenities": [
+      "Online gallery"
+    ],
+    "maxGuests": 0,
+    "photos": [
+      "https://source.unsplash.com/featured/800x600/?wedding,photography"
+    ],
+    "description_short": "Relaxed documentary style.",
+    "description_long": "Full-day or hourly packages.",
+    "email": "snapshotphoto@example.com",
+    "approved": true
+  }
+]

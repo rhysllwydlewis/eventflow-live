@@ -1,0 +1,75 @@
+<!DOCTYPE html><html lang='en-GB'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>Supplier dashboard — EventFlow</title><link rel='stylesheet' href='/assets/css/styles.css'></head><body>
+<header class="header" role="banner">
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label="EventFlow home">
+      <span class="logo" aria-hidden="true"></span><span>EventFlow</span>
+    </a>
+    <button id="burger" class="cta secondary" style="display:none">Menu</button>
+    <nav class="nav" aria-label="Primary">
+      <a href="/start.html">Plan an Event</a>
+      <a href="/suppliers.html">Suppliers</a>
+      <a href="/plan.html">My Plan</a>
+      <a href="/for-suppliers.html">For Suppliers</a>
+      <a href="/faq.html">FAQ</a>
+      <a href="/auth.html" id="nav-auth">Sign in</a>
+      <a href="#" id="nav-dashboard" style="display:none">Dashboard</a>
+      <a href="#" id="nav-signout" style="display:none">Sign out</a>
+    </nav>
+  </div>
+</header>
+<script src="/assets/js/auth-nav.js" defer></script>
+<main class='section'><div class='container'>
+<h1>Supplier dashboard</h1>
+<div class="card">
+  <h3>Your supplier profiles</h3>
+  <p class="small">
+    Experimental: each profile gets a simple listing health score based on photos, description and details you&apos;ve added.
+  </p>
+  <div id="my-suppliers" class="section"><p class="small">Loading…</p></div>
+  <h3 style="margin-top:16px">Create / Edit profile</h3>
+  <div class="form-row" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr))">
+    <div><label>Business name</label><input id="sup-name"></div>
+    <div><label>Category</label><select id="sup-category"><option>Venues</option><option>Catering</option><option>Photography</option><option>Entertainment</option><option>Flowers & décor</option><option>Transport</option><option>Extras & add-ons</option></select></div>
+    <div><label>Location</label><input id="sup-location" placeholder="City, region"></div>
+    <div><label>Price display</label><input id="sup-price" placeholder="e.g. From £500 or ££"></div>
+  </div>
+  <div class="form-row"><label>Short description</label><input id="sup-short" placeholder="One‑line summary"></div>
+  <div class="form-row"><label>Long description</label><textarea id="sup-long" rows="4"></textarea></div>
+  <div class="form-row"><label>Website</label><input id="sup-website" placeholder="your-website-url"></div>
+  <div class="form-row"><label>License / Insurance</label><input id="sup-license" placeholder="e.g. PLI £5m"></div>
+  <div class="form-row"><label>Amenities (comma-separated)</label><input id="sup-amenities" placeholder="Parking, Garden, PA system"></div>
+  <div class="form-row"><label>Max guests</label><input id="sup-max" type="number" min="0" step="1"></div>
+  <div class="form-row"><label>Photos (one URL per line)</label><textarea id="sup-photos" rows="3" placeholder="your-website-url"></textarea></div>
+  <div class="form-actions" style="margin-top:10px"><button class="cta" id="sup-create">Save profile</button><span class="small" id="sup-status"></span></div>
+</div>
+
+<div class="card" style="margin-top:16px">
+  <h3>Your packages</h3>
+  <div id="my-packages" class="section"><p class="small">Loading…</p></div>
+  <h3 style="margin-top:16px">Create a package</h3>
+  <div class="form-row" style="grid-template-columns:repeat(auto-fit,minmax(200px,1fr))">
+    <div><label>For supplier</label><select id="pkg-supplier"></select></div>
+    <div><label>Title</label><input id="pkg-title"></div>
+    <div><label>Price</label><input id="pkg-price" placeholder="e.g. £999 or £45 pp"></div>
+  </div>
+  <div class="form-row"><label>Description</label><textarea id="pkg-desc" rows="4"></textarea></div>
+  <div class="form-row"><label>Image URL (optional)</label><input id="pkg-image" placeholder="your-website-url"></div>
+  <div class="form-actions" style="margin-top:10px"><button class="cta" id="pkg-create">Create package</button><span class="small" id="pkg-status"></span></div>
+</div>
+
+<div class="card" style="margin-top:16px">
+  <h3>Conversations</h3>
+  <div id="threads-sup" class="section"><p class="small">Loading…</p></div>
+</div>
+
+<script src="/assets/js/app.js"></script>
+<script>window.__EF_PAGE__='dash_supplier'</script>
+</div></main>
+<footer class="footer" role="contentinfo">
+  <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap">
+    <div><strong>EventFlow</strong><br><span class="small">Event planning made simple.</span></div>
+    <div class="version">Version: v3.9.0</div>
+    <div class="small"><a href="/credits.html">Credits</a> · <a href="/contact.html">Contact</a> · <a href="/terms.html">Terms</a> · <a href="/privacy.html">Privacy</a></div>
+  </div>
+</footer>
+</body></html>
