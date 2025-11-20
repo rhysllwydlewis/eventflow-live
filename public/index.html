@@ -1,76 +1,80 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EventFlow v5 Experimental</title>
-<style>
-body{margin:0;font-family:sans-serif;}
-header{
- position:fixed;top:0;left:0;right:0;
- height:60px;background:#ffffffee;
- backdrop-filter: blur(8px);
- display:flex;align-items:center;justify-content:space-between;
- padding:0 16px;box-sizing:border-box;
- z-index:1000;transition:transform .35s ease;
- border-bottom:1px solid #ddd;
-}
-header.nav-hidden{transform:translateY(-100%);}
-.menu-btn{font-size:26px;cursor:pointer;}
-#menu{
- position:absolute;top:60px;left:0;right:0;
- background:white;box-shadow:0 4px 10px #0002;
- display:none;flex-direction:column;
-}
-#menu a{padding:14px 16px;text-decoration:none;color:#333;border-bottom:1px solid #eee;}
-#menu.show{display:flex;}
-main{padding-top:70px;}
-section{padding:20px;}
-</style>
-</head>
-<body>
-<header>
- <div class="menu-btn" onclick="toggleMenu()">☰</div>
- <div><strong>EventFlow</strong></div>
- <div>🌙</div>
+<!DOCTYPE html><html lang="en-GB"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EventFlow — Plan your event the simple way.</title>
+<link rel="stylesheet" href="/assets/css/styles.css">
+<meta name="description" content="Find suppliers, build your plan and keep everything in one place — beautifully simple on mobile and desktop.">
+<link rel="icon" href="/favicon.svg">
+</head><body>
+
+<header class="header" role="banner">
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label="EventFlow home">
+      <span class="logo" aria-hidden="true"></span><span>EventFlow</span>
+    </a>
+    <button id="burger" class="cta secondary" style="display:none">Menu</button>
+    <nav class="nav" aria-label="Primary">
+      <a href="/start.html">Plan an Event</a>
+      <a href="/suppliers.html">Suppliers</a>
+      <a href="/plan.html">My Plan</a>
+      <a href="/for-suppliers.html">For Suppliers</a>
+      <a href="/faq.html">FAQ</a>
+      <a href="/auth.html" id="nav-auth">Sign in</a>
+      <a href="#" id="nav-dashboard" style="display:none">Dashboard</a>
+      <a href="#" id="nav-signout" style="display:none">Sign out</a>
+    </nav>
+  </div>
 </header>
-<nav id="menu">
- <a href="#">Plan an Event</a>
- <a href="#">Suppliers</a>
- <a href="#">My Plan</a>
- <a href="#">FAQ</a>
- <a href="#">Dashboard</a>
- <a href="#">Sign out</a>
-</nav>
+<script src="/assets/js/auth-nav.js" defer></script>
 
 <main>
-<section>
-<h1>Experimental v5</h1>
-<p>Auto-hiding header + slide-down menu demo.</p>
-<p>Scroll down to hide the header, scroll up to reveal.</p>
-</section>
-<section style="height:1200px;background:#f5f5f5;">
-Long content...
-</section>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="small">Plan in minutes</div>
+        <h1>Everything you need to organise an event — in one clear place.</h1>
+        <p class="lead">Find venues, catering, entertainment and more. Add to your plan with a click, start conversations when you’re ready, and keep everything together.</p>
+        <div class="hero-cta">
+          <button class="cta" onclick="location.href='/start.html'">Start planning</button>
+          <a class="cta secondary" href="/auth.html">Sign in / Create account</a>
+        </div>
+      </div>
+      <div>
+        <div class="collage" aria-hidden="true">
+          <div class="frame"><span class="tag">Venues</span><img loading="lazy" src="https://source.unsplash.com/featured/600x450/?wedding,venue" alt=""></div>
+          <div class="frame"><span class="tag">Catering</span><img loading="lazy" src="https://source.unsplash.com/featured/600x450/?catering,banquet" alt=""></div>
+          <div class="frame"><span class="tag">Entertainment</span><img loading="lazy" src="https://source.unsplash.com/featured/600x450/?live,band" alt=""></div>
+          <div class="frame"><span class="tag">Photography</span><img loading="lazy" src="https://source.unsplash.com/featured/600x450/?wedding,photography" alt=""></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="small" style="text-transform:uppercase;letter-spacing:.2em;color:#7E8794">Featured packages</div>
+      <div id="featured-packages" class="cards"><div class="card"><p class="small">Loading…</p></div></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="cards">
+        <div class="card"><h3>1 · Tell us about your event</h3><p class="small">Type, location and date help us surface relevant suppliers.</p></div>
+        <div class="card"><h3>2 · Compare suppliers</h3><p class="small">Browse venues, catering, entertainment and more — add to your plan with one click.</p></div>
+        <div class="card"><h3>3 · Save & message</h3><p class="small">Create a free account to save your plan and start conversations with suppliers.</p></div>
+      </div>
+    </div>
+  </section>
 </main>
 
-<script>
-let lastScroll=0;
-window.addEventListener('scroll', ()=>{
- const curr=window.pageYOffset;
- const header=document.querySelector('header');
- if(curr>lastScroll && curr>60){
-   header.classList.add('nav-hidden');
-   document.getElementById('menu').classList.remove('show');
- } else {
-   header.classList.remove('nav-hidden');
- }
- lastScroll=curr;
-});
+<footer class="footer" role="contentinfo">
+  <div class="container" style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap">
+    <div><strong>EventFlow</strong><br><span class="small">Event planning made simple.</span></div>
+    <div class="version">Version: v3.3.0</div>
+    <div class="small"><a href="/credits.html">Credits</a> · <a href="/contact.html">Contact</a> · <a href="/terms.html">Terms</a> · <a href="/privacy.html">Privacy</a></div>
+  </div>
+</footer>
 
-function toggleMenu(){
- const m=document.getElementById('menu');
- m.classList.toggle('show');
-}
-</script>
-</body>
-</html>
+<script src="/assets/js/app.js"></script>
+<script>window.__EF_PAGE__='home'</script>
+</body></html>
